@@ -1,0 +1,22 @@
+Completed Step Output
+
+Business Goal:
+Identify SaaS customer accounts that may be at risk of churn based on both declining product usage and 
+recent support activity.
+
+Definition:
+An account is at risk if:
+- account_status = 'active'
+- usage in the last 30 days dropped by 50% or more compared to usage in the previous 30 days
+- and the account has at least one high-priority support ticket in the last 30 days
+
+Expected Output:
+- account_id
+- account_name
+- last_30_day_usage
+- previous_30_day_usage
+- percent_drop
+- recent_high_priority_tickets
+- risk_reason
+This definition makes “at risk” measurable. Instead of leaving the AI to guess, the workflow defines the active 
+account status, the 50% usage drop threshold, and recent support friction.

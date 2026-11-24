@@ -1,0 +1,10 @@
+changes made here between initial prompt and revised prompt: 
+
+- Added separate usage and ticket summaries before joining to accounts.
+- Added previous 30 day usage.
+- Compared last 30 day usage to previous 30 day usage using a 50% or greater drop threshold.
+- Added a percent_drop calculation.
+- Added an account_status = 'active' filter.
+- Added a high-priority ticket count.
+- Used COALESCE to handle missing usage or ticket records.
+- Added a risk_reason field.

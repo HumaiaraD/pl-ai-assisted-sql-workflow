@@ -1,0 +1,34 @@
+Completed Step Output
+
+Tables:
+- accounts
+- usage_events
+- support_tickets
+
+Joins:
+- accounts.account_id = usage_events.account_id
+- accounts.account_id = support_tickets.account_id
+
+Usage Logic:
+- Count usage events from the last 30 days
+- Count usage events from the previous 30 days
+- Compare the two counts and apply the 50% drop threshold
+
+Support Ticket Logic:
+- Count high-priority support tickets from the last 30 days
+
+Filters:
+- usage_events.event_date within last 60 days
+- support_tickets.created_date within last 30 days
+- support_tickets.priority = 'high'
+- accounts.account_status = 'active'
+
+Output:
+- account_id
+- account_name
+- last_30_day_usage
+- previous_30_day_usage
+- recent_high_priority_tickets
+- risk_reason
+This step grounds the business problem in the actual schema. It also prevents common AI errors, 
+such as inventing columns or incorrectly joining tables.

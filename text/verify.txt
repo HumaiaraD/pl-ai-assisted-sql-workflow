@@ -1,0 +1,18 @@
+Completed SQL Review
+
+SQL Review:
+- Valid tables used: Yes
+- Valid columns used: Yes
+- Correct joins: Yes
+- Usage comparison included: No
+- Support ticket logic included: Yes
+- Risk definition applied: Partially
+- Issues found:
+  - The query only counts usage in the last 30 days.
+  - It does not calculate previous 30 day usage.
+  - It does not compare last 30 day usage to previous 30 day usage.
+  - It does not filter for active accounts using account_status = 'active'.
+  - It may overcount usage events because joining usage_events and support_tickets directly can multiply rows 
+  when an account has multiple usage events and multiple tickets.
+The query is schema-valid but not logically complete, which is a common AI-assisted SQL issue: a query can run 
+correctly and still fail to answer the business question.
